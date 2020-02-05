@@ -34,7 +34,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(11, 6, 8), 'Scalene', '11, 6, 8 is a Scalene triangle')
 
     def testScaleneTriangleC(self):
-        self.assertEqual(classifyTriangle(8, 3, 4), 'Scalene', '8, 3, 4 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(8, 3, 7), 'Scalene', '8, 3, 7 is a Scalene triangle')
 
     def testIsocelesTriangleA(self):
         self.assertEqual(classifyTriangle(2, 2, 3), 'Isoceles', '2, 2, 3 is a Isoceles triangle')
@@ -43,7 +43,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(6, 8, 6), 'Isoceles', '6, 6, 8 is a Isoceles triangle')
 
     def testIsocelesTriangleC(self):
-        self.assertEqual(classifyTriangle(8, 4, 4), 'Isoceles', '8, 3, 4 is a Isoceles triangle')
+        self.assertEqual(classifyTriangle(8, 4, 4), 'Isoceles', '8, 6, 4 is a Isoceles triangle')
 
     def testEquilateralTrianglesA(self):
         self.assertEqual(classifyTriangle(1, 1, 1), 'Equilateral', '1,1,1 should be equilateral')
@@ -91,15 +91,15 @@ class TestTriangles(unittest.TestCase):
                          'Any side input that is not a integer is invalid')
 
     def testInvalidTriangleLengthsA(self):
-        self.assertEqual(classifyTriangle(4, 4, 5), 'NotATriangle',
+        self.assertEqual(classifyTriangle(2, 2, 5), 'NotATriangle',
                          'Any side input that is not a integer is invalid')
 
     def testInvalidTriangleLengthsB(self):
-        self.assertEqual(classifyTriangle(4, 5, 4), 'NotATriangle',
+        self.assertEqual(classifyTriangle(2, 5, 2), 'NotATriangle',
                          'Any side input that is not a integer is invalid')
 
     def testInvalidTriangleLengthsC(self):
-        self.assertEqual(classifyTriangle(5, 4, 4), 'NotATriangle',
+        self.assertEqual(classifyTriangle(5, 2, 2), 'NotATriangle',
                          'Any side input that is not a integer is invalid')
 
 
